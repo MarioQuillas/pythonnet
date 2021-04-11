@@ -638,10 +638,23 @@ namespace Python.Runtime
         /// </remarks>
         public virtual PyObject this[string key]
         {
-            get { return GetItem(key); }
-            set { SetItem(key, value); }
+            get { return this.GetItem(key); }
+            set { this.SetItem(key, value); }
         }
 
+        public virtual PyObject this[params string[] keys]
+        {
+            get
+            {
+                PyObject res=this;
+                foreach (var key in keys)
+                {
+                    res = res.GetItem(key);
+                }
+                return res;
+            }
+            //set { this.SetItem(key, value); }
+        }
 
         /// <summary>
         /// PyObject Indexer
