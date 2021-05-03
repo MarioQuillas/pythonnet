@@ -32,6 +32,7 @@ namespace Python.Runtime
             AssemblyLoader a = assemblyLoader;
 #endif
             string[] cmd = Environment.GetCommandLineArgs();
+            Runtime.PythonDLL = "python38.dll";
             PythonEngine.Initialize();
 
             int i = Runtime.Py_Main(cmd.Length, cmd);

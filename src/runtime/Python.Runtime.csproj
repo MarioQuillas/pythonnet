@@ -26,7 +26,8 @@
     <NoWarn>1591;NU1701</NoWarn>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
 
-    <IsPackable>true</IsPackable>
+    <!--<IsPackable>true</IsPackable>-->
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <PropertyGroup>
